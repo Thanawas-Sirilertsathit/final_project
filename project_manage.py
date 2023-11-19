@@ -1,11 +1,28 @@
 # import database module
-
+import database
+import random
 # start by adding the admin related code
 
 # create an object to read an input csv file, persons.csv
 
 # create a 'persons' table
-
+table=database.Table("persons",database.persons)
+data=database.DB()
+data.insert(table)
+myperson=data.search("persons")
+print(myperson)
+for i in range(len(table.table)):
+    digit1=random.randint(0,9)
+    digit2=random.randint(0,9)
+    digit3=random.randint(0,9)
+    digit4=random.randint(0,9)
+    digit1=str(digit1)
+    digit2=str(digit2)
+    digit3=str(digit3)
+    digit4=str(digit4)
+    password=digit1+digit2+digit3+digit4
+    myperson.add(i,"password",password)
+print(myperson)
 # add the 'persons' table into the database
 
 # create a 'login' table
