@@ -6,10 +6,14 @@ import random
 # create an object to read an input csv file, persons.csv
 
 # create a 'persons' table
+login_data=[]
 table=database.Table("persons",database.persons)
+login_table=database.Table("login",login_data)
 data=database.DB()
 data.insert(table)
+data.insert(login_table)
 myperson=data.search("persons")
+mylogin=data.search("login")
 print(myperson)
 for i in range(len(table.table)):
     digit1=random.randint(0,9)
@@ -21,8 +25,25 @@ for i in range(len(table.table)):
     digit3=str(digit3)
     digit4=str(digit4)
     password=digit1+digit2+digit3+digit4
-    myperson.add(i,"password",password)
+    firstname=table.table[i]["fist"]
+    lastname=table.table[i]["last"]
+    firstcharlast=lastname[0]
+    username=firstname+"."+firstcharlast
+    role=table.table[i]["type"]
+    if role=="student":
+        initial_role="Member"
+    elif role=="faculty":
+        initial_role="Faculty"
+    elif role=="admin":
+        initial_role="Admin"
+    person_id=table.table[i]["ID"]
+    mylogin.table.append({"role":initial_role})
+    # myperson.add(i,"role",initial_role)
+    mylogin.add(i,"username",username)
+    mylogin.add(i,"password",password)
+    mylogin.add(i,"person_id",person_id)
 print(myperson)
+print(mylogin)
 # add the 'persons' table into the database
 
 # create a 'login' table
@@ -45,3 +66,13 @@ print(myperson)
 # add the 'login' table into the database
 
 # add code that performs a login task; asking a user for a username and password; returning [person_id, role] if valid, otherwise returning None
+def log_in():
+    ask_username=input("Enter username : ")
+    ask_password=input("Enter password : ")
+    your_account=mylogin.filter(lambda x: x['username'] == ask_username).filter(lambda x: x['password'] == ask_password)
+    if your_account.table!=[]:
+        return(your_account.select(["role","person_id"]))
+    else:
+        print("Username or password is incorrect")
+        return None
+print(log_in())
