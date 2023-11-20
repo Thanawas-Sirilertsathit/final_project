@@ -75,4 +75,30 @@ def log_in():
     else:
         print("Username or password is incorrect")
         return None
-print(log_in())
+
+# here are things to do in this function:
+   # add code that performs a login task
+        # ask a user for a username and password
+        # returns [person_id, role] if valid, otherwise returning None
+
+# make calls to the initializing and login functions defined above
+
+# initializing()
+val = log_in()
+
+# END part 1
+
+# CONTINUE to part 2 (to be done for the next due date)
+
+# based on the return value for login, activate the code that performs activities according to the role defined for that person_id
+
+# if val[1] = 'admin':
+    # do admin related activities
+# elif val[1] = 'advisor':
+    # do advisor related activities
+# elif val[1] = 'lead':
+    # do lead related activities
+# elif val[1] = 'member':
+    # do member related activities
+# elif val[1] = 'faculty':
+    # do faculty related activities
