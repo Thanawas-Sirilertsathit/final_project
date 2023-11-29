@@ -14,6 +14,11 @@ Student who are not member yet
 2. upload to project table
 3. change student to leader
 
+- evaluate project by rating score for other project that in prototype status [project table]
+
+1. give score rating
+2. save score rating to project table
+
 - log out
 
 Student members
@@ -25,6 +30,11 @@ Student members
 - check project status [project table status]
 
 1. just return status of your project
+
+- evaluate other project by rating score for other project that in prototype status [project table]
+
+1. give score rating
+2. save score rating to project table
 
 - log out
 
@@ -48,10 +58,19 @@ Student leader
 1. send a question to ask your supervisor to Q&a
 2. save it in project table
 
+- change to prototype status [project table]
+
+1. change to prototype status
+
 - submit final report [project table status change]
 
 1. change project status to final_submit
 2. disband the group and advisor to be faculty and students
+
+- evaluate other project by rating score for other project that in prototype status [project table]
+
+1. give score rating
+2. save score rating to project table
 
 - log out
 
@@ -65,6 +84,11 @@ Faculty
 4. if group not has then you can successfully join in
 5. change faculty to advisor
 
+- evaluate project by rating score for other project that in prototype status [project table]
+
+1. give score rating
+2. save score rating to project table
+
 - log out
 
 Advisor
@@ -76,6 +100,11 @@ Advisor
 - giving advice to your own group that supervise [project table]
 
 1. answer back the question that leader asked you before about your project supervising
+
+- evaluate other project by rating score for other project that in prototype status [project table]
+
+1. give score rating
+2. save score rating to project table
 
 - log out
 
