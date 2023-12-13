@@ -14,27 +14,13 @@ Student who are not member yet
 2. upload to project table
 3. change student to leader
 
-- evaluate project by rating score for other project that in prototype status [project table]
-
-1. give score rating
-2. save score rating to project table
-
 - log out
 
 Student members
 
-- look and modify project proposal or report [project table]
+- look and check status of project [project table]
 
-1. edit your project proposal or report
-
-- check project status [project table status]
-
-1. just return status of your project
-
-- evaluate other project by rating score for other project that in prototype status [project table]
-
-1. give score rating
-2. save score rating to project table
+1. check status and check your project
 
 - log out
 
@@ -51,26 +37,20 @@ Student leader
 
 - submit proposal [project table status change]
 
-1. change project status to proposal_submit
+1. change project status to proposal_submit if your project is in starting phrase
 
 - consult with an advisor [project table]
 
 1. send a question to ask your supervisor to Q&a
-2. save it in project table
+2. save it in project dictionary
 
 - change to prototype status [project table]
 
-1. change to prototype status
+1. change to prototype status if your project is in Approved proposal phrase
 
 - submit final report [project table status change]
 
-1. change project status to final_submit
-2. disband the group and advisor to be faculty and students
-
-- evaluate other project by rating score for other project that in prototype status [project table]
-
-1. give score rating
-2. save score rating to project table
+1. change project status to Final pending approval if your project is in Passed evaluation phrase
 
 - log out
 
@@ -87,7 +67,8 @@ Faculty
 - evaluate project by rating score for other project that in prototype status [project table]
 
 1. give score rating
-2. save score rating to project table
+2. save score rating to project dictionary with key (Rating_1,Rating_2,Rating_3,Rating_4 and Rating_5)
+3. if you are 5th rating score then project is automatically turned to Passed evaluation phrase
 
 - log out
 
@@ -95,16 +76,11 @@ Advisor
 
 - approve project and proposal [project table status change]
 
-1. change project status that you supervise to approved_project, approved_proposal, unverified_project or unverified_proposal
+1. change project status that you supervise to Approved proposal, Approved final, starting or Passed evaluation
 
 - giving advice to your own group that supervise [project table]
 
-1. answer back the question that leader asked you before about your project supervising
-
-- evaluate other project by rating score for other project that in prototype status [project table]
-
-1. give score rating
-2. save score rating to project table
+1. answer back the question that leader asked you before about your project supervising by adding in project dictionary
 
 - log out
 
