@@ -454,7 +454,8 @@ while True:
             if option=="0":
                 print("You logged out")
                 break
-        
+    elif val[1]=="passed":
+        print("You already passed and your project already approved")
     # print(myproject)
     # print(mylogin)
     # print(mymemberinvite)
