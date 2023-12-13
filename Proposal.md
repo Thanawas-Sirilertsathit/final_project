@@ -77,6 +77,7 @@ Advisor
 - approve project and proposal [project table status change]
 
 1. change project status that you supervise to Approved proposal, Approved final, starting or Passed evaluation
+2. approve final causes group disband which makes students pass and advisor becomes faculty
 
 - giving advice to your own group that supervise [project table]
 

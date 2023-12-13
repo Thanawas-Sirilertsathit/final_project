@@ -28,6 +28,7 @@ Faculty
 Advisor
 
 - approve or reject project and proposal [project table status change]
+- approve final project caused group disband [login table]
 - giving advice to your own group that supervise [project table]
 - look at your own project [project table]
 

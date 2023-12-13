@@ -199,6 +199,15 @@ while True:
                             if approve=="Yes":
                                 myproject[i]["status"]="Approved final"
                                 print("Final approved")
+                                for i in range(len(mylogin.table)):
+                                    if mylogin.table[i]["ID"]==your_proj.table[0]["lead"]:
+                                        mylogin.table[i]["role"]="passed"
+                                    elif mylogin.table[i]["ID"]==your_proj.table[0]["member1"]:
+                                        mylogin.table[i]["role"]="passed"
+                                    elif mylogin.table[i]["ID"]==your_proj.table[0]["member2"]:
+                                        mylogin.table[i]["role"]="passed"
+                                    elif mylogin.table[i]["ID"]==your_proj.table[0]["advisor"]:
+                                        mylogin.table[i]["role"]="faculty"
                             elif approve=="No":
                                 myproject[i]["status"]="Passed evaluation"
                                 print("Final denied")
@@ -295,7 +304,7 @@ while True:
                 for i in range(len(mylogin.table)):
                     if mylogin.table[i]["ID"]==val[0]:
                         ID=random.randint(100000,999999)
-                        myproject.table.append({"ID":ID,"title":proj_name,"lead":val[0],"member1":None,"member2":None,"advisor":None,"status":"starting"})
+                        myproject.table.append({"ID":ID,"title":proj_name,"lead":val[0],"member1":None,"member2":None,"advisor":None,"status":"starting","question":None,"advice":None,"Rating_1":None,"Rating_2":None,"Rating_3":None,"Rating_4":None,"Rating_5":None})
                         mylogin.add(i,"role","lead")
             elif option=="2":
                 your_invite=mymemberinvite.filter(lambda x: x['user'] == val[0])
