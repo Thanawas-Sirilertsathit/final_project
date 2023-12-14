@@ -285,7 +285,7 @@ while True:
                 your_proj=myproject.filter(lambda x: x['lead'] == val[0])
                 for i in range(len(myproject.table)):
                     if myproject.table[i]["ID"]==your_proj.table[0]["ID"]:
-                        myproject.table[i]["advices"]=question
+                        myproject.table[i]["question"]=question
                         print("Your question has been sent to advisor")
             elif option=="0":
                 print("You logged out")
